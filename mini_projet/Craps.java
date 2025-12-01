@@ -2,8 +2,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Craps {
-    public static void main(String[] args) {
+    public static int lancerDeuxDee(){
         Random generateur = new Random();
+        int d1 = generateur.nextInt(6) + 1 ;
+        int d2 = generateur.nextInt(6) + 1 ;
+        int somme = d1 + d2 ;
+        System.out.println("Vous avez lancé " + d1 + " et " + d2 + ". La somme est " + somme + "." );
+        return somme ; 
+    }
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("=".repeat(34) );
         System.out.println("| Bievenue a toi nouveau joueur |");
@@ -24,11 +31,7 @@ public class Craps {
                 System.out.println();
             }
             else {
-
-                int de1 = generateur.nextInt(6) + 1;
-                int de2 = generateur.nextInt(6) + 1;
-                int somme_de = de1 + de2;
-                System.out.println("Vous avez lancé " + de1 + " et " + de2 + ". La somme est " + somme_de + ".");
+                int somme_de = lancerDeuxDee() ; 
                 if (somme_de == 7 || somme_de == 11) {
                     System.out.println("Gagné");
                     jeton += mise  ;
@@ -41,10 +44,7 @@ public class Craps {
                     boolean arret = false;
                     System.out.println("Votre nouveau but est " + somme_de);
                     while (!arret) {
-                        de1 = generateur.nextInt(6) + 1;
-                        de2 = generateur.nextInt(6) + 1;
-                        somme_de = de1 + de2;
-                        System.out.println("Vous avez lancé " + de1 + " et " + de2 + " La somme est " + somme_de + ".");
+                        somme_de = lancerDeuxDee();
                         if (somme_de == but) {
                             System.out.println("Gagné");
                             arret = true;
