@@ -1,6 +1,6 @@
 import seqint.SeqInt;
 import seqint.SeqIntIterator;
-public class Exo{
+public class Seq {
     //exo 1 
     public static boolean  estvide(SeqInt s){
         SeqIntIterator it  = s.iterator();

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/cours_prm/lib/Array.jar!/" />
+      <root url="jar://$PROJECT_DIR$/cours_prm/lib/SeqInt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
